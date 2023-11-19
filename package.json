@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node --import ./register.js lib/index.ts",
-    "start": "mkdir -p build && nodemon --ext mdx,ts,tsx --import ./register.js lib/index.ts & reload --dir build",
+    "start": "mkdir -p build && nodemon --ignore build/ --ext mdx,ts,tsx,css --import ./register.js lib/index.ts & reload --dir build",
     "lint:fix": "prettier . --write --ignore-unknown"
   },
   "type": "module",

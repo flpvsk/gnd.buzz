@@ -16,8 +16,13 @@ export async function generateSite(): Promise<void> {
     await fs.mkdir("build");
   } catch {}
 
+  const publicFiles = await fs.readdir("public");
+  const copyPublicFiles = publicFiles.map((f) =>
+    fs.cp(path.join("public", f), path.join("build", f), { recursive: true }),
+  );
+
   const sourceFiles = await fs.readdir("pages");
-  await Promise.all(sourceFiles.map(generatePage));
+  await Promise.all([...copyPublicFiles, ...sourceFiles.map(generatePage)]);
 }
 
 async function generatePage(fPath: string): Promise<void> {
