@@ -1,6 +1,83 @@
+:root {
+  --color-base-darker: #1f1a18;
+  --color-base-dark: #332b29;
+  --color-base-light: #cdc4c0;
+  --color-base-lighter: #fcfdfd;
+  --color-accent-light: #fffe74;
+  --color-bg-main: var(--color-base-darker);
+  --color-fg-main: var(--color-base-lighter);
+  --color-fg-sub: var(--color-base-light);
+  --color-fg-sub-sub: var(--color-base-dark);
+}
+
+@font-face {
+  font-family: "Sinistre";
+  src: url("/fonts/Sinistre-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Crimson";
+  src: url("fonts/Crimson_Text/CrimsonText-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Crimson";
+  src: url("fonts/Crimson_Text/CrimsonText-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Crimson";
+  src: url("fonts/Crimson_Text/CrimsonText-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Crimson";
+  src: url("fonts/Crimson_Text/CrimsonText-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Crimson";
+  src: url("fonts/Crimson_Text/CrimsonText-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Crimson";
+  src: url("fonts/Crimson_Text/CrimsonText-SemiBoldItalic.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  background-color: var(--color-bg-main);
+  color: var(--color-fg-main);
+  font-family: "Crimson";
+  font-size: 15pt;
+}
+
+h1 {
+  font-size: 78pt;
+  font-family: "Sinistre";
+  letter-spacing: 2pt;
 }
