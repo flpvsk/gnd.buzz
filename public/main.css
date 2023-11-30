@@ -1,68 +1,12 @@
 :root {
-  --color-base-darker: #1f1a18;
-  --color-base-dark: #332b29;
-  --color-base-light: #cdc4c0;
-  --color-base-lighter: #fcfdfd;
-  --color-accent-light: #fffe74;
-  --color-bg-main: var(--color-base-darker);
-  --color-fg-main: var(--color-base-lighter);
-  --color-fg-sub: var(--color-base-light);
-  --color-fg-sub-sub: var(--color-base-dark);
-}
-
-@font-face {
-  font-family: "Sinistre";
-  src: url("/fonts/Sinistre-Bold.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Crimson";
-  src: url("fonts/Crimson_Text/CrimsonText-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Crimson";
-  src: url("fonts/Crimson_Text/CrimsonText-Italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Crimson";
-  src: url("fonts/Crimson_Text/CrimsonText-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Crimson";
-  src: url("fonts/Crimson_Text/CrimsonText-BoldItalic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Crimson";
-  src: url("fonts/Crimson_Text/CrimsonText-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Crimson";
-  src: url("fonts/Crimson_Text/CrimsonText-SemiBoldItalic.ttf")
-    format("truetype");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
+  --color-base-0: hsl(0, 0%, 96%);
+  --color-base-1: hsl(0, 0%, 80%);
+  --color-base-2: hsl(0, 0%, 12%);
+  --color-base-3: hsl(0, 0%, 4%);
+  --color-accent-0: hsl(20, 100%, 80%);
+  --color-bg-main: var(--color-base-0);
+  --color-fg-main: var(--color-base-3);
+  --color-fg-sub: var(--color-base-2);
 }
 
 * {
@@ -72,13 +16,16 @@
 body {
   background-color: var(--color-bg-main);
   color: var(--color-fg-main);
-  font-family: "Crimson";
+  font-family: serif;
   font-size: 15pt;
 }
 
 h1 {
-  font-size: 78pt;
-  font-family: "Sinistre";
-  letter-spacing: 2pt;
-  line-height: 78pt;
+  font-size: 3em;
+  font-family: sans-serif;
+  letter-spacing: 0.01em;
+  line-height: normal;
+  padding: 4px 1vw 12px 1vw;
+  margin: 0;
+  color: var(--color-fg-sub);
 }
