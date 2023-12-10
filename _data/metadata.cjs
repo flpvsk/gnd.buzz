@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Gnd.Buzz",
+  title: "gnd.buzz",
   description: "",
   language: "en",
 };

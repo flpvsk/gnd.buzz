@@ -21,4 +21,7 @@ module.exports = function (eleventyConfig) {
       decoding: "async",
     },
   });
+
+  eleventyConfig.addPassthroughCopy("fonts/*.ttf");
+  eleventyConfig.addPassthroughCopy("fonts/*.woff2");
 };
