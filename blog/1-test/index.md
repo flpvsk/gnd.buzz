@@ -14,10 +14,18 @@ title: Test blog post
 
 </div>
 
+<div class='gnd-bloc'>
+
 ## Header 2
 
 This is a paragraph
 
+</div>
+
+<div class='gnd-bloc'>
+
 ## Another Header 2
 
 Yo
+
+</div>
