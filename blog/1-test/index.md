@@ -1,7 +1,10 @@
 ---
 layout: layouts/base.webc
 title: Test blog post
+templateEngineOverride: md,webc
 ---
+
+<gnd-bloc>
 
 # Test blog post name
 
@@ -9,6 +12,8 @@ title: Test blog post
 - is
 - a
 - list
+
+</gnd-bloc>
 
 ## Header 2
 

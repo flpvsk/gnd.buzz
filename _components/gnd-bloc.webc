@@ -1,0 +1,11 @@
+<div class="gnd-bloc">
+  <slot />
+</div>
+
+<style>
+.gnd-bloc {
+  background-color: var(--txt-bg-color);
+  width: 100%;
+  max-width: 800px;
+}
+</style>
