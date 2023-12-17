@@ -11,7 +11,7 @@
     <style webc:keep @raw="getBundle('css')"></style>
   </head>
   <body class="page">
-    <main @raw="content" class="content"></main>
+    <main @raw="content" class="main"></main>
     <script webc:type="js">`<!-- Build timestamp: ${Date.now()} -->`</script>
     <script type="module" webc:keep :src="getBundleFileUrl('js')"></script>
   </body>
@@ -19,14 +19,22 @@
 
 <style>
 :root {
-  font-size: 16px;
+  font-size: 20px;
+
   --bg-color: #CDC4C0;
   --txt-bg-color: #FFFFFF;
   --txt-color: #1A1A1A;
   --txt2-color: #333333;
   --txt3-color: #383838;
+  --txt4-color: #898989;
+  --txt-primary-color: red;
+  --txt-primary2-color: tomato;
+
   --header-font: 'Redaction35';
   --subheader-font: 'Redaction';
+
+  --bloc-side-pad: 16px;
+  --max-content-width: 720px;
 }
 
 * {
@@ -92,61 +100,21 @@ body {
   color: var(--txt-color);
   font-family: 'Libre Franklin';
 
-  padding: 12px 16px;
-}
-
-.content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.content > * {
-  width: 100%;
-  max-width: 800px;
-}
-
-.content p {
-  font-size: 1rem;
-}
-
-.content h1 {
-  font-family: var(--header-font);
-  font-size: 4.2rem;
-  line-height: 0.8em;
-
-  color: var(--txt2-color);
-
-  margin: 8px 0px 24px 0px;
-  padding: 32px 8px 24px 8px;
-}
-
-.content h2 {
-  font-family: var(--subheader-font);
-  font-size: 2.8rem;
-  line-height: 0.8em;
-
-  margin: 4px 0px 8px 0px;
-  padding: 12px 8px 0px 8px;
-  width: 100%;
-  max-width: 800px;
-
-  color: var(--txt3-color);
-}
-
-.content p {
   margin: 0;
-  padding: 4px 8px 8px 8px;
+  padding: 0;
 }
 
-.content ul {
-  margin: 0;
-  padding: 4px 8px 8px 1.4em;
-  font-size: 1rem;
+
+a {
+  color: var(--txt-primary-color);
 }
 
-.content .gnd-bloc {
+a:visited {
+  color: var(--txt-primary2-color);
+}
+
+
+.gnd-bloc {
   background-color: var(--txt-bg-color);
   margin-bottom: 24px;
   border: 1px solid black;

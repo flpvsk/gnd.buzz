@@ -1,5 +1,5 @@
 module.exports = {
   title: "gnd.buzz",
-  description: "",
+  description: "Music / Radio / Electronics Blog",
   language: "en",
 };

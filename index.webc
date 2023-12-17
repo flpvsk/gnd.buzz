@@ -1,5 +1,72 @@
 ---
 layout: layouts/base.webc
+eleventyImport:
+  collections: ["post"]
 ---
 
-Hi
+<h1 class="title">gnd.buzz</h1>
+<h2 class="subtitle">Music / Radio / Electronics Blog</h2>
+
+<section class="section">
+  <div
+    class="gnd-bloc post"
+    webc:for="post of collections.post"
+  >
+    <post-description :@post="post" />
+  </div>
+</section>
+
+<style>
+.title {
+  font-family: var(--header-font);
+  font-size: 10rem;
+  font-size: 23vw;
+
+  margin: 0px;
+
+  text-align: center;
+  text-justify: inter-character;
+  color: var(--txt-color);
+
+  width: 100%;
+  padding: 0;
+}
+
+.subtitle {
+  font-family: var(--header-font);
+  width: 100%;
+  padding: 0;
+  margin: -1.4em 0 0 0;
+
+  text-align: center;
+  font-size: 2rem;
+  font-size: 4vw;
+
+  color: var(--txt2-color);
+}
+
+.section {
+  margin: 68px auto 0px auto;
+  width: 100%;
+  max-width: var(--max-content-width);
+  padding: 0px var(--bloc-side-pad) 0px var(--bloc-side-pad);
+}
+
+.post-title {
+
+  font-family: var(--subheader-font);
+  font-size: 2.8rem;
+  line-height: 0.8em;
+
+  margin: 4px 0px 8px 0px;
+  padding: 12px var(--bloc-side-pad) 0px var(--bloc-side-pad);
+
+  color: var(--txt3-color);
+}
+
+.post p {
+  padding: 12px var(--bloc-side-pad) 0px var(--bloc-side-pad);
+}
+
+</style>
+

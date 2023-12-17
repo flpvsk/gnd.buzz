@@ -1,0 +1,9 @@
+<script webc:setup>
+function getExcerpt(post) {
+	console.log(post.content);
+}
+</script>
+
+
+<h4 class="post-title" @text="post.data.title"></h4>
+<div @raw="getExcerpt(post)"></div>
