@@ -102,6 +102,11 @@ body {
   align-items: center;
 }
 
+.content > * {
+  width: 100%;
+  max-width: 800px;
+}
+
 .content p {
   font-size: 1rem;
 }
@@ -111,13 +116,10 @@ body {
   font-size: 4.2rem;
   line-height: 0.8em;
 
+  color: var(--txt2-color);
+
   margin: 8px 0px 24px 0px;
   padding: 32px 8px 24px 8px;
-  width: 100%;
-  max-width: 800px;
-
-  color: var(--txt2-color);
-  background-color: var(--txt-bg-color);
 }
 
 .content h2 {
@@ -131,22 +133,21 @@ body {
   max-width: 800px;
 
   color: var(--txt3-color);
-
 }
 
 .content p {
   margin: 0;
   padding: 4px 8px 8px 8px;
-  width: 100%;
-  max-width: 800px;
 }
 
 .content ul {
   margin: 0;
   padding: 4px 8px 8px 1.4em;
   font-size: 1rem;
-  width: 100%;
-  max-width: 800px;
+}
+
+.content .gnd-bloc {
+  background-color: var(--txt-bg-color);
 }
 
 </style>
