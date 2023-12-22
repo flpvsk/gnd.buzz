@@ -5,5 +5,30 @@ function getExcerpt(post) {
 </script>
 
 
-<h4 class="post-title" @text="post.data.title"></h4>
-<div @raw="getExcerpt(post)"></div>
+<div class="gnd-bloc post">
+  <h4 class="post-title" @text="post.data.title"></h4>
+  <div @raw="getExcerpt(post)"></div>
+</div>
+
+<style>
+.post p {
+  padding: 12px var(--bloc-side-pad) 0px var(--bloc-side-pad);
+}
+
+.post .post-title {
+
+  font-family: var(--subheader-font);
+  font-size: 2.8rem;
+  line-height: 0.8em;
+
+  margin: 4px 0px 8px 0px;
+  padding: 12px var(--bloc-side-pad) 0px var(--bloc-side-pad);
+
+  color: var(--txt3-color);
+}
+
+.post:hover .post-title {
+  color: var(--txt-primary-color);
+}
+
+</style>

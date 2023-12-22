@@ -8,12 +8,7 @@ eleventyImport:
 <h2 class="subtitle">Music / Radio / Electronics Blog</h2>
 
 <section class="section">
-  <div
-    class="gnd-bloc post"
-    webc:for="post of collections.post"
-  >
-    <post-description :@post="post" />
-  </div>
+  <post-description webc:for="post of collections.post" :@post="post" />
 </section>
 
 <style>
@@ -50,22 +45,6 @@ eleventyImport:
   width: 100%;
   max-width: var(--max-content-width);
   padding: 0px var(--bloc-side-pad) 0px var(--bloc-side-pad);
-}
-
-.post-title {
-
-  font-family: var(--subheader-font);
-  font-size: 2.8rem;
-  line-height: 0.8em;
-
-  margin: 4px 0px 8px 0px;
-  padding: 12px var(--bloc-side-pad) 0px var(--bloc-side-pad);
-
-  color: var(--txt3-color);
-}
-
-.post p {
-  padding: 12px var(--bloc-side-pad) 0px var(--bloc-side-pad);
 }
 
 </style>
