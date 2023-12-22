@@ -1,16 +1,19 @@
 ---
 layout: layouts/blog.webc
-title: Test blog post
+date: 2023-01-08
+title: "Test blog post name Very Very Very long name"
 tags: post
 ---
 
 <div class='gnd-bloc'>
 
 <div class='gnd-blog-date'>
-Jan 8th, 2023
+{{ date | date-only }}
 </div>
 
-# Test blog post name Very Very Very long name
+# {{ title }}
+
+<!-- excerpt -->
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 do eiusmod tempor incididunt ut labore et dolore magna
@@ -18,6 +21,8 @@ aliqua. [Iaculis](https://example.com) nunc sed augue
 lacus. Diam vulputate ut pharetra sit. Pellentesque
 pulvinar pellentesque habitant morbi. Nibh sit amet
 commodo nulla facilisi nullam vehicula.
+
+<!-- excerpt -->
 
 [Consequat](https://archive.org/not-visited) interdum varius
 sit amet mattis. Quis enim lobortis scelerisque fermentum

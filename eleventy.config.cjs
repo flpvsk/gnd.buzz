@@ -1,6 +1,7 @@
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const { eleventyImagePlugin } = require("@11ty/eleventy-img");
 const markdownIt = require("markdown-it");
+const { format } = require("date-fns/format");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("./README.md");
@@ -35,4 +36,8 @@ module.exports = function (eleventyConfig) {
       typographer: true,
     }),
   );
+
+  eleventyConfig.addFilter("date-only", function (d) {
+    return format(d, "MMM do, yyyy");
+  });
 };

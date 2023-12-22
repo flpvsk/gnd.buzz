@@ -1,25 +1,41 @@
 <script webc:setup>
 function getExcerpt(post) {
-	console.log(post.content);
+	console.log('page', post.page);
+	// console.log('data', post.data);
 }
 </script>
 
-
-<div class="gnd-bloc post">
-  <h4 class="post-title" @text="post.data.title"></h4>
-  <div @raw="getExcerpt(post)"></div>
-</div>
+<a :href="post.page.url" class="post-link">
+  <div class="gnd-bloc post">
+      <h4 class="post-title" @text="post.data.title"></h4>
+      <p
+        webc:keep
+        webc:type='11ty'
+        11ty:type='liquid'
+      >
+        {{ post.data.date | date-only }}
+      </p>
+      <p @text="post.data.excerpt"></p>
+      <p @text="getExcerpt(post)"></p>
+  </div>
+</a>
 
 <style>
+.post-link {
+  text-decoration: none;
+  color: var(--txt-color);
+}
+
 .post p {
   padding: 12px var(--bloc-side-pad) 0px var(--bloc-side-pad);
+  color: var(--txt-color);
 }
 
 .post .post-title {
-
   font-family: var(--subheader-font);
   font-size: 2.8rem;
   line-height: 0.8em;
+  text-decoration: none;
 
   margin: 4px 0px 8px 0px;
   padding: 12px var(--bloc-side-pad) 0px var(--bloc-side-pad);
@@ -27,8 +43,15 @@ function getExcerpt(post) {
   color: var(--txt3-color);
 }
 
+.post-link:hover {
+  color: var(--txt-primary-color);
+}
+
 .post:hover .post-title {
   color: var(--txt-primary-color);
 }
 
+.post:hover p {
+  color: var(--txt-primary-color);
+}
 </style>
