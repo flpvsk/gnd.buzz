@@ -4,7 +4,6 @@ layout: layouts/base.webc
 
 <ul class="menu">
   <li><a href="/">Home</a></li>
-  <li><a href="/about">About</a></li>
 </ul>
 
 <article @raw="content" class="content"></article>

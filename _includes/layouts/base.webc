@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title webc:if="title" @text="title + ' | ' + metadata.title"></title>
     <title webc:if="!title" @text="metadata.title"></title>
-    <meta name="description" :content="description || metadata.description">
+    <meta name="description" :content="description || metadata.subtitle">
     <script webc:keep @raw="getBundle('js', 'head')"></script>
     <!--link rel="stylesheet" href="css/base.css"-->
     <style webc:keep @raw="getBundle('css')"></style>
   </head>
   <body class="page">
     <main @raw="content" class="main"></main>
+    <footer class="footer">
+      <ul class="footer-menu">
+        <li><a href="" class="footer-menu-item">RSS</a></li>
+      </ul>
+    </footer>
     <script webc:type="js">`<!-- Build timestamp: ${Date.now()} -->`</script>
     <script type="module" webc:keep :src="getBundleFileUrl('js')"></script>
   </body>
@@ -104,6 +109,26 @@ body {
   padding: 0;
 }
 
+.main {
+  margin-bottom: 32px;
+}
+
+.footer {
+  margin-bottom: 8px;
+  padding: 0px 16px;
+}
+
+.footer-menu {
+  margin: 0;
+  padding: 0px var(--bloc-side-pad) 0px var(--bloc-side-pad);
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-menu-item {
+  padding-right: 1rem;
+}
 
 a {
   color: var(--txt-primary-color);
