@@ -3,7 +3,6 @@ const fs = require("fs/promises");
 module.exports = {
   eleventyComputed: {
     excerpt: async (data) => {
-      console.log("page", data.page);
       const content = await fs.readFile(data.page.inputPath, "utf8");
       const contentSplit = content.split("<!-- excerpt -->");
 

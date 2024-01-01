@@ -13,13 +13,20 @@ eleventyImport:
     <post-description webc:for="post of collections.post" :@post="post" />
   </section>
 
+  <section class="main-section main-section-projects">
+    <h3 class="main-section-title">projects...</h3>
+    <project-description
+      webc:for="projects of collections.projects"
+      :@project="project"
+    />
+  </section>
+
   <section class="main-section">
     <h3 class="main-section-title">about...</h3>
     <p class="main-section-text">
     This site is a collection of quick notes, art and
-    circuits. There's no particular purpose to this
-    collection other than to archive thoughts and
-    experiments.
+    circuits. There's no particular purpose to it other than
+    to archive thoughts and experiments.
     </p>
   </section>
 
@@ -82,11 +89,6 @@ eleventyImport:
 .main-section {
   padding: 0px var(--bloc-side-pad) 0px var(--bloc-side-pad);
   max-width: 40rem;
-}
-
-.main-section-blog {
-  grid-column: 1 / span 1;
-  grid-row: 1 / -1;
 }
 
 .main-section-title {
